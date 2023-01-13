@@ -14,6 +14,6 @@ function App() {
         <ListDesStagers/>
     </Provider>
   );
-}
+} 
 
 export default App;

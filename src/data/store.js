@@ -13,7 +13,7 @@ const initialData = {
             ]
         }
     ]
-}
+} 
 
 const stageresSlice = createSlice(
      {

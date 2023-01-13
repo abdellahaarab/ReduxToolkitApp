@@ -13,6 +13,6 @@ function ListDesStagers() {
         }
     </div>
   )
-}
+} 
 
 export default ListDesStagers
