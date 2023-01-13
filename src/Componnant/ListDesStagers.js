@@ -4,15 +4,28 @@ import { useSelector } from "react-redux";
 
 function ListDesStagers() {
     const data = useSelector(state=>state.stagere.stageres)
-    console.log(data)
+    // console.log(data)
   return (
-    <div>
+    <div className='List'>
         <h3>List Des Stageres</h3>
         {
-            data.map((element,index)=><p key={index}>{element.numero}<br/></p>)
+            data.map( (element,index) =>  
+            <div key={index}>
+                      <div>{element.numero}</div> 
+                      <div>{element.nomeESTprenome}</div> 
+                      <div>{element.fileire}</div> 
+                      
+                      <div>                     
+                         {
+                            element.notes.map((e,i)=>< span key={i}>{e.module}</span>)
+                        }
+                      </div>
+                      
+                       
+            </div> )
         }
     </div>
   )
 } 
-
+// <p key={index}>{element.numero}<br/><p key={index}>{element.numero}<br/></div>
 export default ListDesStagers

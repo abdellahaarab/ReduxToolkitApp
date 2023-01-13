@@ -23,6 +23,9 @@ const stageresSlice = createSlice(
             addStagere:(state , action) => {
                 const stg = action.payload;
                 state.stageres.push(stg);
+            },
+            deletStagere:(state,action)=>{
+                return  state.filter( stg=> stg.numero !== action.payload.numero);
             }
         }
 
@@ -40,4 +43,4 @@ export const store = configureStore(
 )
 
 
-export const { addStagere } = stageresSlice.actions
+export const { addStagere, deletStagere } = stageresSlice.actions

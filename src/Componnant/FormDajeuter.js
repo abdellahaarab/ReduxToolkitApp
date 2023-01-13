@@ -1,3 +1,4 @@
+import '../css/FormDajeuter.css'
 import React, { useState } from 'react'
 import { useDispatch } from "react-redux";
 import { addStagere } from '../data/store';
@@ -34,7 +35,7 @@ function FormDajeuter() {
     }
   
     return (
-        <div>
+        <div className='FormDajeuter'>
             <form>
                 <input type="text" placeholder='Numero'  onChange={(e)=>setNumero(e.target.value)   }/><br/>
                 <input type="text" placeholder='Nom'  onChange={(e)=>setNom(e.target.value)   }    /><br/>
