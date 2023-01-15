@@ -5,10 +5,14 @@ import { useSelector } from "react-redux";
 function ListDesStagers() {
     const data = useSelector(state=>state.stagere.stageres)
     // console.log(data)
+   
+    
   return (
     <div className='List'>
         <h3>List Des Stageres</h3>
         {
+           data ?
+
             data.map( (element,index) =>  
             <div key={index}>
                       <div>{element.numero}</div> 
@@ -23,6 +27,8 @@ function ListDesStagers() {
                       
                        
             </div> )
+
+            :<p>There's no data </p>
         }
     </div>
   )

@@ -4,7 +4,7 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 const initialData = {
     stageres : [
         {
-            numero:1,
+            numero: 1,
             nomeESTprenome:"AAV ABAB",
             fileire:"DD",
             notes:[
@@ -22,10 +22,16 @@ const stageresSlice = createSlice(
         reducers:{
             addStagere:(state , action) => {
                 const stg = action.payload;
-                state.stageres.push(stg);
+                state.stageres && state.stageres.push(stg);
             },
-            deletStagere:(state,action)=>{
-                return  state.filter( stg=> stg.numero !== action.payload.numero);
+            deletStagere:(state,action)=>{  
+                state = state.stageres && state.stageres.filter((stg,index) => stg.numero !== action.payload);
+                return { stageres : state}
+            },
+            editStagere:(state,action)=>{
+                state = state.stageres && state.stageres.filter((stg,index) => stg.numero !== action.payload.id);
+                state.push(...state, action.payload.stg)
+                return state
             }
         }
 
@@ -43,4 +49,4 @@ export const store = configureStore(
 )
 
 
-export const { addStagere, deletStagere } = stageresSlice.actions
+export const { addStagere, deletStagere, editStagere } = stageresSlice.actions
