@@ -14,16 +14,16 @@ function ListDesStagers() {
            data ?
 
             data.map( (element,index) =>  
-            <div key={index}>
-                      <div>{element.numero}</div> 
-                      <div>{element.nomeESTprenome}</div> 
-                      <div>{element.fileire}</div> 
+            <div key={index} style={{display:"flex"}}>
+                      <div>-Numero : {element.numero } - </div> 
+                      <div>Nome : {element.nomeESTprenome } - </div> 
+                      <div>Fileire : {element.fileire } </div> 
                       
-                      <div>                     
+                      <ol>                     
                          {
-                            element.notes.map((e,i)=>< span key={i}>{e.module}</span>)
+                            element.notes.map((e,i)=>< li key={i}>Module : {e.module} - Moyane Module : {e.moyanmodule}</li>)
                         }
-                      </div>
+                      </ol>
                       
                        
             </div> )
