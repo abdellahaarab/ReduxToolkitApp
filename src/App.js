@@ -7,18 +7,22 @@ import ListDesStagers from './Componnant/ListDesStagers';
 import FormDelete from './Componnant/FormDelete';
 import FormEditStg from './Componnant/FormEditStg';
 import Appbar from './section/appbar';
+import { BrowserRouter as Router, Routes , Route  } from 'react-router-dom';
 
 
 function App() {
   
   return (
     <Provider store={store}>
+      <Router>
         <Appbar/>
-         <FormDajeuter  />
-         <ListDesStagers/>
-       {/* <FormDelete/>
-        
-        <FormEditStg/> */}
+        <Routes>
+          <Route path="/" element={<ListDesStagers/>}/>
+          <Route path="/ajeuter" element={<FormDajeuter  />} />
+          <Route path='/delete' element={<FormDelete/>}/>
+          <Route path='/edit' element={<FormEditStg/>}/>
+        </Routes>
+      </Router>
     </Provider>
   );
 } 
