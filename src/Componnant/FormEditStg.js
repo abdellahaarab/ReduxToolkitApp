@@ -4,8 +4,8 @@ import { editStagere } from '../data/store'
 
 
 function FormEditStg() {
-    const inputStyle = "placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-    const buttonStyle ="bg-gradient-to-r from-orange-500 via-amber-500 to-cyan-300 text-indigo-900 dark:bg-slate-900 rounded-xl p-2 ring-1 ring-slate-900/5 shadow-xl"
+    const inputStyle = "placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+    const buttonStyle ="bg-gradient-to-r from-orange-300 via-amber-300 to-cyan-100 m-2 text-indigo-900 dark:bg-slate-900 rounded-xl p-2 ring-1 ring-slate-900/5 shadow-xl"
 
     const data = useSelector(state=>state.stagere.stageres)
     const dispatch = useDispatch()
@@ -65,13 +65,13 @@ function FormEditStg() {
     
     
     return (
-        <div className='FormDajeuter p-2 bg-slate-50 shadow-lg '>
+        <div className='FormDajeuter p-4 bg-slate-50 shadow-lg'>
             <h3 className='text-black font-bold'>Edit Stg</h3>
-            <form className='p-5 '>
+            <form className='p-5 drop-shadow-2xl'>
                 <input type="text" value={Numero} placeholder='Numero pour recherche '  onChange={fSerch}  className={inputStyle}/><br/>
                 <input type="text" value={Nom} placeholder='Nom'  onChange={(e)=>setNom(e.target.value)   }    className={inputStyle}/><br/>
                 <input type="text" value={Fileire} placeholder='Fileire' onChange={(e)=>setFileire(e.target.value)   }  className={inputStyle}  /><br/>
-                <div style={{backgroundColor:"red", padding:"20px 0"}}>
+                <div style={{backgroundColor:"red", padding:"20px 0"}} className="bg-gradient-to-r from-slate-200  to-cyan-500 rounded-xl">
 
                     <input type="text" value={Module} placeholder='Module' onChange={(e)=>setModule(e.target.value)   }   className={inputStyle} /><br/>
                     <input type="text" value={Moyenne} placeholder='Moyenne Module' onChange={(e)=>setMoyenne(e.target.value)   }  className={inputStyle}   /><br/>

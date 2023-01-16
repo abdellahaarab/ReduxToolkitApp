@@ -15,9 +15,10 @@ function App() {
     <Provider store={store}>
         <Appbar/>
          <FormDajeuter  />
-        <FormDelete/>
-       {/* <ListDesStagers/>*/}
-        <FormEditStg/> 
+         <ListDesStagers/>
+       {/* <FormDelete/>
+        
+        <FormEditStg/> */}
     </Provider>
   );
 } 

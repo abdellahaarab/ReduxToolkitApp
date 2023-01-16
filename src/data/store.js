@@ -18,7 +18,7 @@ const initialData = {
 const stageresSlice = createSlice(
      {
         name: "stageres",
-        initialState: {stageres : []},
+        initialState: initialData, // {stageres : []},
         reducers:{
             addStagere:(state , action) => {
                 const stg = action.payload;

@@ -56,7 +56,7 @@ function FormDajeuter() {
   
     return (
         <div className='FormDajeuter'>
-            <form>
+            <form className='drop-shadow-2xl bg-gray-200 p-8'>
                 <input type="text" value={Numero?Numero:""} placeholder='Numero'  onChange={(e)=>setNumero(e.target.value)   } className={inputStyle}/><br/>
                 <input type="text" value={Nom?Nom:""} placeholder='Nom'  onChange={(e)=>setNom(e.target.value)   }   className={inputStyle} /><br/>
                 <input type="text" value={Prenom?Prenom:""} placeholder='Prenom' onChange={(e)=>setPrenom(e.target.value)   }  className={inputStyle}  /><br/>
@@ -65,7 +65,7 @@ function FormDajeuter() {
 
                     <input type="text" value={Module?Module:""} placeholder='Module' onChange={(e)=>setModule(e.target.value)   }   className={inputStyle} /><br/>
                     <input type="text" value={Moyenne?Moyenne:""} placeholder='Moyenne Module' onChange={(e)=>setMoyenne(e.target.value)   }    className={inputStyle} /><br/>
-                     <ul>                     
+                     <ul className='p-2'>                     
                          {
      Notes.map((e,i)=>< li className='text-blue-600' key={i}>Module : {e.module} - Moyane Module : {e.moyanmodule}</li>)
                         }
