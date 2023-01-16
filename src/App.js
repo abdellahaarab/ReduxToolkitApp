@@ -6,19 +6,24 @@ import { store } from './data/store';
 import ListDesStagers from './Componnant/ListDesStagers';
 import FormDelete from './Componnant/FormDelete';
 import FormEditStg from './Componnant/FormEditStg';
-import FormRechercher from './Componnant/FormRechercher';
+import Appbar from './section/appbar';
+import { BrowserRouter as Router, Routes , Route  } from 'react-router-dom';
 
 
 function App() {
   
-  return (
+  return ( 
     <Provider store={store}>
-        <FormRechercher/>
-        <FormDajeuter  />
-        <FormDelete/>
-        <ListDesStagers/>
-        <FormEditStg/>
-    </Provider>
+      <Router>
+        <Appbar/>
+        <Routes>
+          <Route path="/" element={<ListDesStagers/>}/>
+          <Route path="/ajeuter" element={<FormDajeuter  />} />
+          <Route path='/delete' element={<FormDelete/>}/>
+          <Route path='/edit' element={<FormEditStg/>}/>
+        </Routes>
+      </Router>
+    </Provider> 
   );
 } 
 
