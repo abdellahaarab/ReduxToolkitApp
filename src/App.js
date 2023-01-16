@@ -6,18 +6,18 @@ import { store } from './data/store';
 import ListDesStagers from './Componnant/ListDesStagers';
 import FormDelete from './Componnant/FormDelete';
 import FormEditStg from './Componnant/FormEditStg';
-import FormRechercher from './Componnant/FormRechercher';
+import Appbar from './section/appbar';
 
 
 function App() {
   
   return (
     <Provider store={store}>
-        <FormRechercher/>
-        <FormDajeuter  />
+        <Appbar/>
+         <FormDajeuter  />
         <FormDelete/>
-        <ListDesStagers/>
-        <FormEditStg/>
+       {/* <ListDesStagers/>*/}
+        <FormEditStg/> 
     </Provider>
   );
 } 
