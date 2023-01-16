@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Routes , Route  } from 'react-router-dom';
 
 function App() {
   
-  return (
+  return ( 
     <Provider store={store}>
       <Router>
         <Appbar/>
@@ -23,7 +23,7 @@ function App() {
           <Route path='/edit' element={<FormEditStg/>}/>
         </Routes>
       </Router>
-    </Provider>
+    </Provider> 
   );
 } 
 

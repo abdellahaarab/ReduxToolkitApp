@@ -31,7 +31,7 @@ function FormEditStg() {
         setMoyenne("")
 
     }
-
+ 
     function fEditStagere(e){
         e.preventDefault();
         const tStge = {

@@ -9,16 +9,16 @@ function Appbar() {
            <ul  className='flex'>
               <li className='flex-1'>
                 <Link to="/"> All data </Link>
-              </li>
+              </li> 
               <li className='flex-1' >
                 <Link to="/ajeuter">Add STG</Link>
               </li>
               <li className='flex-1' >
                 <Link to="/delete">Delete STG</Link>
-              </li>
+              </li> 
               <li className='flex-1' >
                 <Link to="/edit">Update STG</Link>
-              </li>
+              </li> 
            </ul>
         </div>
         <FormRechercher className='flex-5'/>
