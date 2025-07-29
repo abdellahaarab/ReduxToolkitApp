@@ -5,7 +5,7 @@ const initialData = {
     stageres : [
         {
             numero: 1,
-            nomeESTprenome:"AAV ABAB",
+            nomeESTprenome:"AA ABAB",
             fileire:"DD",
             notes:[
                 {module:"M123", moyanmodule:52},
